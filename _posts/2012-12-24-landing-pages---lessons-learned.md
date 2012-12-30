@@ -1,14 +1,15 @@
 ---
 layout: post
-title: "Landing Pages: Call for commitment"
+title: "Landing Pages: Build for commitment"
 description: "marketing, landing page"
 category:
 tags: [marketing, landing pages, growth]
 ---
 {% include JB/setup %}
 
-Whether we are getting people to sign up for a email list, sign a petition or click to learn more, we are really looking for a **commitment**.
-Visitor's action on the page is the reflection of the  **commitment**  they make towards the business relationship.
+Whether we are building a landing page to get people to sign up for a email list, sign a petition or click to learn more, we are really looking for a **commitment**.
+
+Visitor's action on the landing page is the reflection of the  **commitment**  they make towards the business relationship.
 
 Here is how I see the process of building up to this commitment:
 
@@ -16,7 +17,7 @@ Here is how I see the process of building up to this commitment:
 {:toc}
 
 
-Here is what  Robert Cialdini, in his book *"Influence"* has to say:
+Robert Cialdini, in his book *"Influence"* has to said:
 
 >If I can get you to make a commitment (that is, to take a stand, to go on record), I will have set the stage for your automatic and ill-considered consistency with that earlier commitment. Once a stand is taken, there is a natural tendency to behave in ways that are stubbornly consistent with the stand.
 
@@ -52,7 +53,6 @@ Here are a few ways to build trust:
 
 * **Social Proof:** If your brand is not yet recognizable by many, try to establish social proof. Show the commitment others made towards your product through previous business relationships.
 
-	Here are some  points, which can be helpful:
 	* Testimonials from you customers
 	* Endorsements
 	* Information about your team
@@ -78,7 +78,7 @@ Here the rubber hits the road. All previous development ultimately brings to the
 
 Here are few tips to get to closure:
 
-* **Think eye flow:** People mentally follow natural order of reading. Allocate right and top portions of your screen to <a href="#Educare">Educate</a> and **left and bottom** parts to commit.
+* **Think eye flow:** People mentally follow natural order of reading. Allocate right and top portions of your screen to educate and **left and bottom** parts to commit.
 
 * **Grab attention** Your main action link or sign-up form needs to have bright points, which grab the attention.
 

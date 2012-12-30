@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Iterating to find the right software abstractions"
+title: "JSONit methodology: Iterating to find the right software abstractions"
 description: "Iterating on abstractions"
 category:
 tags: [architecture, iteration, modeling]
@@ -22,24 +22,98 @@ Here is what MIT Professor Daniel Jackson has to say about it:
 
 
 # Write it in your language
-When I think about the new functionality, which will be iterated upon, I start from taking and simple use-case and build a json file, which will   describe my use case.
-
 Let's take a simple example:
+
 You are building a product catalog for eCommerce web site. The web site is pretty simple.
 It's just a simple product page describing the product, it should have product image, price and add to car button.
-The home page will have links to your product pages.
-No need to extra complexity.
+We have three product types:
+  - Books. Can come in paperback or hardcover.
+  - T-shirts, which are come in multiple sizes and colors.
+  - Cups - come in different colors and sizes.
 
-Well, except, that  down the road you will need to go on to add promotions, relevant products, it will have special prices for special gold club visitors, it will have product reviews, product ratings. If it's a book you will need to look inside the book feature. Who knows what else will come? Let's not over-architect  it right now and build only what users need right now.
+Down the road we might need to go on to add promotions, relevant products, it will have special prices for special gold club visitors, it will have product reviews, product ratings. There will be more product categories. Let's not over-architect  it right now and build only what the team needs right now.
 
-Now let's implement it in json:
+Here are couple of problems, which arise around using common frameworks like Java/spring, ruby/Rails, javascript/backbone:
+1. How do we structure the model? Should product class have t-shirt size property as well as the book author?
+Should we have a base product class and a subclass for each product category?  Will we have to create new subclass every time we introduce the new product category?
+2. How to structure the presentation layer? We know how to map the model to the page using template mechanisms. Do we have separate page for each category? Do we have one page and build some kind of widget mechanism which will allow dynamically adding necessary features depending on the product type?
+Question here, do these established frameworks provide good language to describe our product page to enable fast iterations and avoid clatter.
 
+When I think about the new functionality, which will be iterated upon, I start from taking and simple use-case and build a json file, which will describe my use case. Reason I pick json is it's so easy to read and operate with this format in any language. 
 
+Let's experiment in json to find the best language for our situation:
 
+Here is sample *book* product description:
+{% highlight json %}
+{
+ "category": "book",
+ "title": "Robinson Crusoe",
+ "author" : "Daniel Defoe",
+ "description" : "Robinson Crusoe is a novel by Daniel Defoe that was first published in 1719...",
+ "formats" : [
+   {
+     "type":"Paperback",
+     "price":"4.95"
+   },
+  {
+     "type":"Hardcover",
+     "price":"7.95"
+   }   
+   ]
+}
+{% endhighlight %}
+Here is sample *t-shirt* product description:
+{% highlight json %}
+{
+ "category": "t-shirt",
+ "colors": ["blue","orange","red","white"],
+ "description" : "This t-shit will make you feel like giant bunny rabbit is hugging you.",
+ "sizes" : [
+   {
+    "size-range": ["XXS", "XS", "S", "M", "L"],
+    "price" : "17.95"
+   },
+   {
+    "size-range": ["XL", "XXL"],
+    "price" : "19.95"
+   },
+   ]
+}
+{% endhighlight %}
 
+Just based on quick look at this data it is clear that certain data fields will need to be presented as widgets on the page. Like color, size selector or book formats.
 
+Let's think how these widgets can be structured.
+Again, we can start from defining our widgets in json:
+
+ColorPicker widget:
+{% highlight json %}
+{
+  "name" : "color-picker",
+  "field" : "colors",
+  "position" : "left", 
+  "style" : "drop-down"  
+}
+{% endhighlight %}
+SizePicker widget:
+{% highlight json %}
+{
+  "name" : "size-picker",
+  "field" : "sizes",
+  "position" : "bottom", 
+  "style" : "horizontal-list",  
+}
+{% endhighlight %}
+
+As you can see each widget knows which field it represents.
+This structure also opens possibilities for experimenting with different options to present size and color choices (drop-down vs. horizontal-list) as well as experimenting with positioning of elements.
 
 # Implement your DSL
+coming soon
+
+
 
 
 # Iterate
+
+coming soon
