@@ -1,5 +1,5 @@
 
-@import url(http://fonts.googleapis.com/css?family=Karla|Andika|Montserrat|Numans|Archivo+Black|Coda+Caption:800);
+@import url(http://fonts.googleapis.com/css?family=Numans|Open+Sans+Condensed:300,700);
 
 /* screen.css
  *
@@ -39,10 +39,10 @@ a.pdf:before {
 
 h1,h2,h3,h4 {
 	line-height:1em;
-	font-size: 2em;
-	font-weight: 800;
+	font-size: 2.2em;
+	font-weight: 700;
 	clear: left;
-	font-family: 'Coda Caption', sans-serif;
+	font-family: 'Open Sans Condensed', sans-serif;
 	color: #454545
 }
 h1 {

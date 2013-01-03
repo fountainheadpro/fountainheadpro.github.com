@@ -84,7 +84,8 @@ Here are few tips to get to closure:
 
 * **Feedback** Make sure that the button or form has visual feedback in place, which demonstrates that this is where the action needs to be performed. It needs to feel inviting and responsive.
 
-* **Ask only for what you need**
+* **Ask only for what you need** 
+
 
 **Final disclosure**:
 *I'm not claiming to be an expert in digital marketing or, how it is called now  growth hacking. It's just the act of posting something on-line, leaving it there and getting people to do something without human attention always fascinated me. Essentially, landing page is an electronic sales rep, who works 24/7 for you and does not charge much commission.*
