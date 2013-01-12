@@ -17,7 +17,7 @@ Here is how I see the process of building up to this commitment:
 {:toc}
 
 
-Robert Cialdini, in his book *"Influence"* has to said:
+Robert Cialdini, said in his book *"Influence"*:
 
 >If I can get you to make a commitment (that is, to take a stand, to go on record), I will have set the stage for your automatic and ill-considered consistency with that earlier commitment. Once a stand is taken, there is a natural tendency to behave in ways that are stubbornly consistent with the stand.
 
