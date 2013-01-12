@@ -70,4 +70,5 @@ We consider acceptable video load performance to be between 0.5 and 1 second. Th
 
 Our experiments demonstrated that ETA can not be achieved consistently using traditional cloud providers. In order to consistently deliver achieve this ETA, I'm working on video pre-loading technology, which will allow loading videos for further interactions while the user is engaged with previous steps.
 
-**Final remarks**: Here is the page to learn more about HTML5 video and events: [http://www.w3.org/2010/05/video/mediaevents.html] 
+**Final remarks**: Here is the page to learn more about HTML5 video and events: [HTML5 Video Events and API](http://www.w3.org/2010/05/video/mediaevents.html)
+
