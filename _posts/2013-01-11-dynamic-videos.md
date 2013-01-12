@@ -64,7 +64,7 @@ Going higher quality will not work.
 
 In order to understand the real user experience, I measured the timing between the moment I request video play, till the moment the user see the first frame. In order to capture the moment, when the video starts playing I use *play* event, which is fired the moment the video loading is complete and the user see the first frame. 
 
-I also [mixpanel](http://www.mixpanel.com){:target="_blank"} to aggregate the metrics.
+I also use [mixpanel](http://www.mixpanel.com){:target="_blank"} to aggregate the metrics.
 
 We consider acceptable video load performance to be between 0.5 and 1 second. This speed allows the video conversation to go smoothly with no noticeable delays.
 
