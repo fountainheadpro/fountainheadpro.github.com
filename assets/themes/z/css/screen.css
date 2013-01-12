@@ -134,8 +134,7 @@ ul#markdown-toc{
 	position: relative;
 	padding-left: 0px;
 	counter-reset: my-counter;
-	margin-bottom: 20px
-
+	margin-bottom: 20px;
 }
 
 ul#markdown-toc li
@@ -143,6 +142,7 @@ ul#markdown-toc li
  display: inline-block;
  text-align: center;
  width: 32%;
+ position: relative;
 }
 
 ul#markdown-toc li:before
@@ -154,6 +154,7 @@ ul#markdown-toc li:before
     height: 100px;
     padding: 0px;
     background: #666;
+    border: 4px solid brown;
     color: white;
     text-align: center;
     font: 56px Times New Roman, sans-serif;
@@ -163,6 +164,25 @@ ul#markdown-toc li:before
     display: block;
     text-align: center;
     margin: 0 auto;
+    z-index: 100;
+}
+
+ul#markdown-toc li:after
+{
+    width:  calc(100% - 100px);
+    width:  -webkit-calc(100% - 100px);
+    width:  -moz-calc(100% - 100px);
+    height: 4px;
+    padding: 0px;
+    background: brown;
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    content:  "";
+    position: absolute;
+    top: 50px;
+    left:  -webkit-calc(50% + 52px);
+    z-index: 80;
 }
 
 ul#markdown-toc li:nth-child(3n):before
@@ -178,6 +198,11 @@ ul#markdown-toc li:nth-child(3n+1):before
 ul#markdown-toc li:nth-child(3n+2):before
 {
 	background-color: green;
+}
+
+ul#markdown-toc li:last-child::after
+{
+	background-color: transparent;
 }
 
 blockquote {
