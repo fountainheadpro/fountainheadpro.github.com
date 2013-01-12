@@ -44,8 +44,8 @@ I used [video.js](http://http://videojs.com/){:target="_blank"}, which is open s
 I noticed flickering, which break the user engagement. The solution was fairly simple, but not obvious. 
 
 1. Instead of reloading the player I started reloading the video source, while the instance of the player stayed the same.
-2. After modifying the source, I found that the video player still was in the pause mode and the way to play the video after the source was changed was only by calling play() method.
-3. Video player still works as the video tape, which needs to be rewind.
+2. Just modifying video source is not as easy as it sounds. I found that the video player still was in the pause mode and source change will not start the video.  The only way to play the video after the source was changed was only by calling play() method *before* source change to switch the player to play mode.
+3. Video player still works as the video tape and rmembers the position, where it was before the source change. It is necessary to "rewind" the video to the begining before chaging source.
 
 Here is the final script, which I use to reset video player before swapping source:
 
