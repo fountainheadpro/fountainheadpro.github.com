@@ -37,8 +37,8 @@ To solve this problem, I had to use *timeupdate* event and pause the video on th
 The container listening to the events "finished_scene" will present choices to the user. 
 
 #Stitching videos together
-First lesson, learned about dynamically building a conversation from videos is that swapping them is not as easy as swapping other DOM elements. Video is played as part of the video player and 
-dynamically reloading the video player instance on every new video will not produce satisfactory user experience. It produces ugly flicks, which break user engagement with the story. 
+First lesson, learned about dynamically building a conversation from videos is that swapping them is not as easy as swapping other DOM elements. Video is played as part of the video player element.
+Dynamically reloading the video player instance every we need to play the next scene will not produce satisfactory user experience. It produces ugly flicks, which break user engagement with the story. 
 I used [video.js](http://http://videojs.com/){:target="_blank"}, which is open source and has reasonably good documentation.
 
 I noticed flickering, which break the user engagement. The solution was fairly simple, but not obvious. 
